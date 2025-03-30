@@ -16,3 +16,5 @@ variable "application_name" {}
 variable "repo_url" {}
 variable "repo_path" {}
 variable "repo_branch" {}
+variable "git_username" {}
+variable "git_token" {}

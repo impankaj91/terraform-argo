@@ -18,5 +18,14 @@ resource "argocd_application" "nginx" {
       path            = var.repo_path
       target_revision = var.repo_branch
     }
+    sync_policy {
+      sync_options = ["CreateNamespace=true"]
+      automated {
+        prune     = true
+        self_heal = true
+      }
+
+    }
   }
+
 }

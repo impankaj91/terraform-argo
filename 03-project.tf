@@ -11,7 +11,7 @@ resource "argocd_project" "project" {
     }
     source_repos = ["*"]
 
-    cluster_resource_blacklist {
+    cluster_resource_whitelist {
       group = "*"
       kind  = "*"
     }
